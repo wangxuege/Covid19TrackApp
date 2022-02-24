@@ -1,16 +1,15 @@
 import React from 'react'
 import CountUp from "react-countup";
 import moment from "moment";
-import 'moment/locale/ja'
+import 'moment/locale/ja';
 
 export const Cards = ({data :{ confirmed, deaths, lastUpdate }}) => {
 
   
   if(!confirmed) {
     return "Loading...";
-  }
+  };
 
-  console.log({data :{ confirmed, deaths, lastUpdate }});
   return (
     <div className="ui stackable cards">
       <div className="card">
@@ -43,4 +42,4 @@ export const Cards = ({data :{ confirmed, deaths, lastUpdate }}) => {
       </div>
     </div>
   )
-}
+};
