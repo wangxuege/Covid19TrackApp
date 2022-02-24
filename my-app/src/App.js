@@ -15,11 +15,15 @@ function App() {
     })()
   },[])
 
+  const handleCountryChange =async (country) =>{
+    setData(await fetchData(country));
+  };
+
   return (
     <div className="App">
       <Cards data={data}/>
-      <CountryPicker />
-      <Charts />
+      <CountryPicker handleCountryChange={handleCountryChange}/>
+      <Charts data={data}/>
     </div>
   );
 }
