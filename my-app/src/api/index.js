@@ -1,11 +1,12 @@
-// import axios from "axios";
+import axios from "axios";
 
-// export const url = "https://covid19.mathdro.id/api";
-// const getData = async ()=>{
-//   try{
-//     const response = await axios.get(url);
-//     return response;
-//   }catch (err){
-//     console.log("取得失敗");
-//   }
-// };
+const url = "https://covid19.mathdro.id/api";
+export const fetchData = async ()=>{
+  try{
+    const {data :{ confirmed, deaths, lastUpdate }} = await axios.get(url);
+    return{ confirmed, deaths, lastUpdate };
+  }catch (err){
+    console.error(err);
+    alert("取得失敗");
+  }
+};
