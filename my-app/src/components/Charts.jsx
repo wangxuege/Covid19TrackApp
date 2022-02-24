@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react';
 import { fetchDailyData } from '../api';
-import {Line, Bar} from "react-chartjs-2"; 
+import {Line} from "react-chartjs-2"; 
 import  Chart from 'chart.js/auto';
 import "../App.css";
 
@@ -30,12 +30,11 @@ export const Charts = () => {
       borderColor: "skyblue",
       backgroundColor: "rgba(0, 150, 255, 0.5)"
     }],
-
   };
 
   return (
     <div className='LineChart'>
-      <Line data={lineData} />
+     <Line data={lineData} />
     </div>
   )
 };

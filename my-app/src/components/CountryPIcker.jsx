@@ -9,7 +9,7 @@ export const CountryPicker = ({ handleCountryChange }) => {
     (async() => {
       setCountries(await fetchCountries());
     })()
-  },[]);
+  },[setCountries]);
 
   return (
     <div className="ui stackable form">
